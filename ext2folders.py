@@ -40,8 +40,11 @@ folder = {
     "sqlite3": "sqlite3",
 }
 
+# Target folder path, relative to 'home' directory
+target_folder = "Downloads"
+
 # You can run this from any location, except target folder
-LOCATION = str(pathlib.Path.home() / "Downloads")
+LOCATION = str(pathlib.Path.home() / target_folder)
 files = []
 for (dirpath, dirnames, filenames) in os.walk(LOCATION):
     files.extend(filenames)
